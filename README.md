@@ -36,11 +36,11 @@
 ##### *STEP - 25 - The final step was to git commit the Makefile and cmpe283-1.*
 
 
-# ASSIGNMENT 2
+### ASSIGNMENT 2
 ##### *1. Sravani : %eax=0x4FFFFFFF*
 ##### *2. Viswamithra : %eax=0x4FFFFFFE*
 
-## *Path to assignment-2 files: linux/cmpe283/Assignment -2/*
+### *Path to assignment-2 files: linux/cmpe283/Assignment -2/*
 
 
 ##### *1. I have worked on CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE*
@@ -55,7 +55,7 @@
 ##### *10.Ran CPUID Package with 0x4FFFFFFE in eax.*
 ##### *11. Total time taken higher32 bits are returned to ebx and lower32 bits are returned to ecx.*
 
-## *Commands for executing the Assignment2:*
+### *Commands for executing the Assignment2:*
 ##### *1. Modified the code in cpuid.c and vmx file.*
 ##### *2. make modules*
 ##### *3. make -j 4 modules*
@@ -67,7 +67,7 @@
 ##### *9. modprobe kvm*
 ##### *10. modprobe kvm_intel*
 
-## *Creating Inner Virtual Machine inside a VM using the below commands*
+### *Creating Inner Virtual Machine inside a VM using the below commands*
 ##### *11. sudo apt update*
 ##### *12. sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils*
 ##### *13. sudo systemct1 status libvirtd*
