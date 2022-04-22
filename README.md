@@ -37,48 +37,48 @@
 
 
 ### ASSIGNMENT 2
-1. Sravani : %eax=0x4FFFFFFF
-2. Viswamithra : %eax=0x4FFFFFFE
+##### *1. Sravani : %eax=0x4FFFFFFF*
+##### *2. Viswamithra : %eax=0x4FFFFFFE*
 
-Path to assignment-2 files: linux/cmpe283/Assignment -2/
+##### *Path to assignment-2 files: linux/cmpe283/Assignment -2/*
 
 
-1. I have worked on CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE
-2. Modified the code in vmx.c to get the total number of exits.
-3. Modified the code in cpuid.c to to get the total number of exits.
-4. Installed the nested virtual machine inside the virtual machine.
-5. Ran CPUID Package with 0x4FFFFFFF in eax.
-6. Total number of exits is returned to eax.
-7. Modified the code in vmx.c to get the total time taken in handling the exits.
-8. Modified the code in cpuid.c to to get the total time taken in handling the exits.
-9. Installed CPUID Packege inside the nested VM.
-10.Ran CPUID Package with 0x4FFFFFFE in eax.
-11. Total time taken higher32 bits are returned to ebx and lower32 bits are returned to ecx.
+##### *1. I have worked on CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE*
+##### *2. Modified the code in vmx.c to get the total number of exits.*
+##### *3. Modified the code in cpuid.c to to get the total number of exits.*
+##### *4. Installed the nested virtual machine inside the virtual machine.*
+##### *5. Ran CPUID Package with 0x4FFFFFFF in eax.*
+##### *6. Total number of exits is returned to eax.*
+##### *7. Modified the code in vmx.c to get the total time taken in handling the exits.*
+##### *8. Modified the code in cpuid.c to to get the total time taken in handling the exits.*
+##### *9. Installed CPUID Packege inside the nested VM.*
+##### *10.Ran CPUID Package with 0x4FFFFFFE in eax.*
+##### *11. Total time taken higher32 bits are returned to ebx and lower32 bits are returned to ecx.*
 
-Commands for executing the Assignment2:
-1. Modified the code in cpuid.c and vmx file.
-2. make modules
-3. make -j 4 modules
-4. sudo bash
-5. sudo make INSTALL_MOD_STRIP=1 modules_install && make install
-6. lsmod | grep kvm
-7. sudo rmmod kvm_intel
-8. sudo rmmod kvm
-9. modprobe kvm
-10. modprobe kvm_intel
+## *Commands for executing the Assignment2:*
+##### *1. Modified the code in cpuid.c and vmx file.*
+##### *2. make modules*
+##### *3. make -j 4 modules*
+##### *4. sudo bash*
+##### *5. sudo make INSTALL_MOD_STRIP=1 modules_install && make install*
+##### *6. lsmod | grep kvm*
+##### *7. sudo rmmod kvm_intel*
+##### *8. sudo rmmod kvm*
+##### *9. modprobe kvm*
+##### *10. modprobe kvm_intel*
 
-Creating Inner Virtual Machine inside a VM using the below commands
-1. sudo apt update
-2. sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
-3. sudo systemct1 status libvirtd
-4. sudo systemct1 enable --now libvirtd
-5. sudo apt install virt-manager
-6. sudo virt-manager
-7. Install ubuntu 20.4 iso image
-8. Installing CPUID package
-9. Download the CPUID deb package for AMD64 https://packages.ubuntu.com/bionic/admin/cpuid
-10. Installed the package and execute install using sudo dpkg -i cpuid_20170122-1.deb
-11. Executed the below command inside VM
+## *Creating Inner Virtual Machine inside a VM using the below commands*
+##### *11. sudo apt update*
+##### *12. sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils*
+##### *13. sudo systemct1 status libvirtd*
+##### *14. sudo systemct1 enable --now libvirtd*
+##### *15. sudo apt install virt-manager*
+##### *16. sudo virt-manager*
+##### *17. Install ubuntu 20.4 iso image*
+##### *18. Installing CPUID package*
+##### *19. Download the CPUID deb package for AMD64 https://packages.ubuntu.com/bionic/admin/cpuid*
+##### *110. Installed the package and execute install using sudo dpkg -i cpuid_20170122-1.deb*
+##### *111. Executed the below command inside VM*
         cpuid -l 0X4ffffffd -s exit_number
         cpuid -l 0X4ffffffc -s exit_number
 
