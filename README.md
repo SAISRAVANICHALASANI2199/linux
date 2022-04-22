@@ -36,11 +36,11 @@
 ##### *STEP - 25 - The final step was to git commit the Makefile and cmpe283-1.*
 
 
-### ASSIGNMENT 2
+# ASSIGNMENT 2
 ##### *1. Sravani : %eax=0x4FFFFFFF*
 ##### *2. Viswamithra : %eax=0x4FFFFFFE*
 
-##### *Path to assignment-2 files: linux/cmpe283/Assignment -2/*
+## *Path to assignment-2 files: linux/cmpe283/Assignment -2/*
 
 
 ##### *1. I have worked on CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE*
