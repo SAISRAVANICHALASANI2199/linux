@@ -37,10 +37,11 @@
 
 
 ### ASSIGNMENT 2
+1. Sravani : %eax=0x4FFFFFFF
+2. Viswamithra : %eax=0x4FFFFFFE
 
 Path to assignment-2 files: linux/cmpe283/Assignment -2/
-Sravani : %eax=0x4FFFFFFF
-Viswamithra : %eax=0x4FFFFFFE
+
 
 1. I have worked on CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE
 2. Modified the code in vmx.c to get the total number of exits.
