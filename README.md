@@ -79,7 +79,7 @@
 ##### *19. Download the CPUID deb package for AMD64 https://packages.ubuntu.com/bionic/admin/cpuid*
 ##### *110. Installed the package and execute install using sudo dpkg -i cpuid_20170122-1.deb*
 ##### *111. Executed the below command inside VM*
-        cpuid -l 0X4ffffffd -s exit_number
-        cpuid -l 0X4ffffffc -s exit_number
+        cpuid -l 0X4fffffff -s exit_number
+        cpuid -l 0X4ffffffe -s exit_number
 
 
