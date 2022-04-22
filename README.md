@@ -36,3 +36,48 @@
 ##### *STEP - 25 - The final step was to git commit the Makefile and cmpe283-1.*
 
 
+### ASSIGNMENT 2
+
+Path to assignment-2 files: linux/cmpe283/Assignment -2/
+Sravani : %eax=0x4FFFFFFF
+Viswamithra : %eax=0x4FFFFFFE
+
+1. I have worked on CPUID leaf node %eax=0x4FFFFFFF and %eax=0x4FFFFFFE
+2. Modified the code in vmx.c to get the total number of exits.
+3. Modified the code in cpuid.c to to get the total number of exits.
+4. Installed the nested virtual machine inside the virtual machine.
+5. Ran CPUID Package with 0x4FFFFFFF in eax.
+6. Total number of exits is returned to eax.
+7. Modified the code in vmx.c to get the total time taken in handling the exits.
+8. Modified the code in cpuid.c to to get the total time taken in handling the exits.
+9. Installed CPUID Packege inside the nested VM.
+10.Ran CPUID Package with 0x4FFFFFFE in eax.
+11. Total time taken higher32 bits are returned to ebx and lower32 bits are returned to ecx.
+
+Commands for executing the Assignment2:
+  make modules
+  make -j -4 modules
+  sudo bash
+  sudo make INSTALL_MOD_STRIP=1 modules_install && make install
+  sudo rmmod kvm-intel
+  sudo rmmod kvm
+  modprobe kvm
+  modprobe kvm-intel
+
+Creating Inner Virtual Machine inside a VM using the below commands
+
+  sudo apt update
+  sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+  sudo systemctl status libvirtd
+  sudo systemctl enable --now libvirtd
+  sudo apt install virt-manager
+  sudo virt-manager
+  install ubuntu 20.4 iso image
+  Installing CPUID Package
+  downloaded the CPUID deb Package for AMD64(https://packages.ubuntu.com/bionic/admin/cpuid)
+  installed the above package using the command install using sudo dpkg -i cpuid_20170122-1.deb
+  We have ran the below commands in the inner VM which is inside a VM
+  cpuid -l 0X4fffffff -s exit_number
+  cpuid -l 0X4ffffffe -s exit_number
+
+
