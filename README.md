@@ -27,12 +27,12 @@
 ##### *STEP - 16 - Run the command make -j x modules (where x = 4).*
 ##### *STEP - 17 - Run sudo make INSTALL_MOD_STRIP=1 mdoules_install.*
 ##### *STEP - 18 - Run  the command sudo make install.*
-##### *STEP - 19
-##### *STEP - 20
-##### *STEP - 21
-##### *STEP - 22
-##### *STEP - 23
-##### *STEP - 24
-##### *STEP - 25
-##### *STEP - 26
+##### *STEP - 19 - Lastly, execute sudo reboot to force the OS to load the most latest kernel module.*
+##### *STEP - 20 - To acquire the.ko kernel object, execute make.*
+##### *STEP - 21 - Run sudo insmod cmpe 283-1.ko to load this file.*
+##### *STEP - 22 - The previous step will not provide any output on the console. Run dmesg to see the output.*
+##### *STEP - 23 - The console will exhibit a variety of lines, one of which will be the Pinbased Controls MSR value,. If the number 9 appears, it means that nested virtualization hasn't been activated, and you'll have to begin over.*
+##### *STEP - 24 - If you wish to make modifications to the kernel module, instead of resetting the system, you may simply delete it, apply the modifications, rebuild the module, and reinstall it.*
+##### *STEP - 25 - The final step was to git commit the Makefile and cmpe283-1.*
+
 
