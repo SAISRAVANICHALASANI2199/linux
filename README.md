@@ -55,29 +55,30 @@ Viswamithra : %eax=0x4FFFFFFE
 11. Total time taken higher32 bits are returned to ebx and lower32 bits are returned to ecx.
 
 Commands for executing the Assignment2:
-  make modules
-  make -j -4 modules
-  sudo bash
-  sudo make INSTALL_MOD_STRIP=1 modules_install && make install
-  sudo rmmod kvm-intel
-  sudo rmmod kvm
-  modprobe kvm
-  modprobe kvm-intel
+1. Modified the code in cpuid.c and vmx file.
+2. make modules
+3. make -j 4 modules
+4. sudo bash
+5. sudo make INSTALL_MOD_STRIP=1 modules_install && make install
+6. lsmod | grep kvm
+7. sudo rmmod kvm_intel
+8. sudo rmmod kvm
+9. modprobe kvm
+10. modprobe kvm_intel
 
 Creating Inner Virtual Machine inside a VM using the below commands
-
-  sudo apt update
-  sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
-  sudo systemctl status libvirtd
-  sudo systemctl enable --now libvirtd
-  sudo apt install virt-manager
-  sudo virt-manager
-  install ubuntu 20.4 iso image
-  Installing CPUID Package
-  downloaded the CPUID deb Package for AMD64(https://packages.ubuntu.com/bionic/admin/cpuid)
-  installed the above package using the command install using sudo dpkg -i cpuid_20170122-1.deb
-  We have ran the below commands in the inner VM which is inside a VM
-  cpuid -l 0X4fffffff -s exit_number
-  cpuid -l 0X4ffffffe -s exit_number
+1. sudo apt update
+2. sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+3. sudo systemct1 status libvirtd
+4. sudo systemct1 enable --now libvirtd
+5. sudo apt install virt-manager
+6. sudo virt-manager
+7. Install ubuntu 20.4 iso image
+8. Installing CPUID package
+9. Download the CPUID deb package for AMD64 https://packages.ubuntu.com/bionic/admin/cpuid
+10. Installed the package and execute install using sudo dpkg -i cpuid_20170122-1.deb
+11. Executed the below command inside VM
+        cpuid -l 0X4ffffffd -s exit_number
+        cpuid -l 0X4ffffffc -s exit_number
 
 
