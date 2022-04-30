@@ -92,9 +92,13 @@
 ##### *5. Ran CPUID Package with 0x4FFFFFFC in eax.*
 
 ### Assignment 4
-#### Q3. Shadow paging has a higher exit count than nested paging because the VMM has to do more work in shadow paging.
+##### Carry on with Assignment 3's setting.
+##### Closed down the inside VM using the standard OS shutdown procedure.
+##### Remove the kvm-intel module from the outer VM with the command sudo rmmod kvm intel.
+##### Restart the inner VM.
+##### Q3. Shadow paging has a higher exit count than nested paging because the VMM has to do more work in shadow paging.
 
-#### Q4. When shadow paging is enabled (ept=0), the VM conducts more TLB flushes, page faults, and other operations, resulting in more exits than when ept=1.
+##### Q4. When shadow paging is enabled (ept=0), the VM conducts more TLB flushes, page faults, and other operations, resulting in more exits than when ept=1.
 
   
  
