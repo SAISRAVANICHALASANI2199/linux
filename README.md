@@ -81,5 +81,22 @@
 ##### *111. Executed the below command inside VM*
         cpuid -l 0X4fffffff -s exit_number
         cpuid -l 0X4ffffffe -s exit_number
+### Assignment 3
+  #### Viswamithra - %eax=0x4FFFFFFD.
+  #### Sravani - %eax=0x4FFFFFFC.
+  
+##### *I have worked on CPUID leaf node %eax=0x4FFFFFFC and %eax=0x4FFFFFFD*
+##### *2. Modified the code in vmx.c to get the total number of exits.*
+##### *3. Modified the code in cpuid.c to to get the total number of exits.*
+##### *4. Installed the nested virtual machine inside the virtual machine.*
+##### *5. Ran CPUID Package with 0x4FFFFFFC in eax.*
+
+### Assignment 4
+#### Q3. Shadow paging has a higher exit count than nested paging because the VMM has to do more work in shadow paging.
+
+#### Q4. When shadow paging is enabled (ept=0), the VM conducts more TLB flushes, page faults, and other operations, resulting in more exits than when ept=1.
+
+  
+ 
 
 
